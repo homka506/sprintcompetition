@@ -1,0 +1,339 @@
+// Override Bootstrap's Sass default variables
+//
+// Nearly all variables in Bootstrap are written with the `!default` flag.
+// This allows you to override the default values of those variables before
+// you import Bootstrap's source Sass files.
+//
+// Overriding the default variable values is the best way to customize your
+// CSS without writing _new_ styles. For example, change you can either change
+// `$body-color` or write more CSS that override's Bootstrap's CSS like so:
+// `body { color: red; }`.
+
+
+//
+// Bring in Bootstrap
+//
+
+// Option 1
+//
+// Import all of Bootstrap's CSS
+
+@import "bootstrap/scss/bootstrap";
+
+// Option 2
+//
+// Place variable overrides first, then import just the styles you need. Note that some stylesheets are required no matter what.
+
+// Toggle global options
+$enable-gradients: true;
+$enable-shadows: true;
+
+// Customize some defaults
+$body-color: #333;
+$body-bg: #fff;
+$border-radius: .4rem;
+$success: #7952b3;
+
+@import "bootstrap/scss/functions"; // Required
+@import "bootstrap/scss/variables"; // Required
+@import "bootstrap/scss/mixins"; // Required
+
+@import "bootstrap/scss/root"; // Required
+@import "bootstrap/scss/reboot"; // Required
+@import "bootstrap/scss/type";
+ @import "bootstrap/scss/images";
+// @import "bootstrap/scss/code";
+@import "bootstrap/scss/grid";
+// @import "bootstrap/scss/tables";
+// @import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+ @import "bootstrap/scss/dropdown";
+// @import "bootstrap/scss/button-group";
+// @import "bootstrap/scss/input-group"; // Requires forms
+// @import "bootstrap/scss/custom-forms";
+ @import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar"; // Requires nav
+// @import "bootstrap/scss/card";
+// @import "bootstrap/scss/breadcrumb";
+// @import "bootstrap/scss/pagination";
+// @import "bootstrap/scss/badge";
+// @import "bootstrap/scss/jumbotron";
+// @import "bootstrap/scss/alert";
+// @import "bootstrap/scss/progress";
+ @import "bootstrap/scss/media";
+// @import "bootstrap/scss/list-group";
+@import "bootstrap/scss/close";
+// @import "bootstrap/scss/toasts";
+@import "bootstrap/scss/modal"; // Requires transitions
+// @import "bootstrap/scss/tooltip";
+// @import "bootstrap/scss/popover";
+// @import "bootstrap/scss/carousel";
+// @import "bootstrap/scss/spinners";
+@import "bootstrap/scss/utilities";
+// @import "bootstrap/scss/print";
+
+
+//
+// Custom styles
+//
+
+@import "icon-list";
+
+
+body {
+  padding-top: 0.2rem !important;
+  font-family: Roboto!important;
+  font-style:normal!important;
+  color: #2D3142!important;
+  overflow-x: hidden;
+}
+
+header{
+
+  img {
+    height: auto!important;
+    width:20%!important;
+  }
+
+}
+
+#main{
+  background-image: url(/assets/img/Wave.png), linear-gradient(
+90deg
+, rgba(41, 191, 18, 1) 0, rgba(41, 191, 18, 1) 100%);
+    background-size: 100% 500px;
+    background-repeat: no-repeat;
+    background-position: top, bottom;
+    padding:55px 0px;
+    width: 100%;
+}
+
+.title_color {
+  color: #29bf12!important;
+  text-transform:uppercase!important;
+}
+
+
+.title_text {
+  padding-left:5%!important;
+  img{
+    width:60%!important;
+    height: auto!important;
+  }
+  
+}
+// Style Bootstrap icons
+.bi {
+  fill: currentColor;
+}
+.title_img{
+  margin:0!important;
+}
+h1{
+  font-size: 41pt!important;
+  font-weight: 800;
+  color:#2D3145!important;
+  align-items: center;
+  margin-bottom: 3%!important;
+}
+.subtitle {
+  margin-bottom: 10%!important;
+  font-size: 23pt!important;
+  font-weight: 500!important;
+}
+img {
+  margin:auto!important;
+}
+ .emphasis, .download, .competition {
+  margin-bottom: 13%!important;
+}
+
+.emphasis_box {
+  height: 360px!important;
+  margin-bottom: 5%;
+}
+.emphasis{
+  margin-top:10%!important;
+}
+.competition {
+  background-color: #f0f0f0;
+  padding:3%!important;
+  border-radius:25px!important;
+  box-shadow: 0 0 10px #afb0b7;
+}
+.competition_row {
+  margin-bottom: 3%!important;
+}
+.competition_colunm {
+  background-color: #ffff;
+  border-radius:25px!important;
+  padding:10px!important;
+  margin-left:5px!important;
+  margin-right:5px!important;
+  box-shadow: 0 0 10px #afb0b7;
+}
+.competition_img{
+    width:75px!important;
+}
+.competition_text--red {
+  color:#ff3c38;
+  text-decoration: uppercase!important;
+  font-weight: 700;
+}
+
+.download_img {
+  width:70%!important;
+  height: auto!important;
+}
+footer {
+  background: #afb0b7;
+}
+.footer_list {
+  li{
+    display: inline!important;
+    padding-left: 15px!important;
+  }
+  list-style-type: none;
+  display: inline!important;
+}
+
+p{
+  font-size:12pt;
+  font-weight: normal;
+}
+.vertical-align {
+  margin: auto!important;
+}
+.footer_copyright {
+  text-align: center!important;
+  font-size: 12px!important;
+
+}
+a {
+  text-decoration: none;
+  color:#fff;
+  :hover {
+    color:#454e9e!important;
+  }
+}
+
+i {
+  font-size: 25px!important;
+  padding-left:15px!important;
+
+}
+.footer_img {
+  width:60%!important;
+  height: auto!important;
+}
+.footer_container {
+  text-align: center!important;
+}
+.social{
+  text-align: end!important;
+}
+
+@media (max-width: 992px)  {
+  #main {
+    background-size: 100% 350px;
+    padding: 40px 20px;
+  }
+  h1{
+    text-align: center!important;
+    font-size: 30px!important;
+    margin-top:2%!important;
+    margin-bottom: 5%!important;
+  }
+  .subtitle {
+    font-size: 24px!important;
+  }
+  .title_text{
+    text-align: center!important;
+   }
+
+   .competition_colunm {
+     height: 200px!important;
+     width: auto!important;
+   }
+   footer{
+     padding-top:2%!important;
+   }
+}
+@include media-breakpoint-down(sm) {
+  header {
+    text-align: center!important;
+    img{
+      width:60%!important;
+    }
+    
+  }
+ 
+  
+  .title, .emphasis, .download, .competition {
+    margin-bottom: 13%!important;
+  }
+
+  .competition_colunm {
+    margin-bottom: 5%!important;
+  }
+  .competition_border {
+    text-align: center!important;
+  }
+  .competition_weight {
+    margin:auto!important;
+  }
+  .footer_img{
+    width:40%!important;
+  }
+  footer{
+    text-align: center!important;
+  }
+  .social{
+    text-align: center!important;
+  }
+  .footer_container, .social {
+    margin-bottom: 3%!important;
+  }
+}
+
+.policy_update {
+  margin-bottom: 3%!important;
+}
+h3, h4 {
+  margin-bottom: 2%!important;
+  margin-top:3%!important;
+}
+.policy_email {
+  color:#454e9e!important;
+}
+.policy_body, .terms_body{
+  margin-bottom: 5%!important;
+}
+@include media-breakpoint-down(xs) {
+  .footer_list{
+    padding-inline-start: 0!important;
+}
+}
+@media only screen and (max-width: 868px) {
+  #main {
+    background-size: 100% 350px!important;
+    padding: 40px 20px!important;
+  }
+}
+@media (max-width: 575.98px) {
+  #main {
+    padding: 10px 0px!important;
+    background-size: 220% 550px!important;
+  }
+  
+}
+
+@media (max-width: 480px) {
+  .title_color{
+    color: #29bf12 !important;
+  }
+  .emphasis_box {
+    height: 50%!important;
+  }
+}
