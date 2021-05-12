@@ -20,3 +20,33 @@
 
 import "../../node_modules/bootstrap/js/dist/util.js";
 import "../../node_modules/bootstrap/js/dist/modal.js";
+;
+$(document).ready(function(){
+    $('.appstoreprviews_slider').slick({
+        centerMode: true,
+        centerPadding: '60px',
+        slidesToShow: 3,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 3
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 1
+            }
+          }
+        ]
+      }
+        
+    );
+  });
